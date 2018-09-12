@@ -1,5 +1,4 @@
 # util
-==============
 
 ## mongo-root
 
@@ -13,13 +12,13 @@ $ cd mongo-root/
 
 # set information for new users
 # -----------------------------
-#   name       : (string) User name
+#   user       : (string) User name
 #   db         : (string) Database that each user belonged to
 #   customData : (object) User information
 #   roles      : (array)  User roles
 
-$ cp ./ref/users.js users.js
-$ vi users.js
+$ cp ./ref/new-users.js new-users.js
+$ vi new-users.js
 
 # execute mongoDB shell script
 
