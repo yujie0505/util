@@ -1,12 +1,11 @@
-var data = {
+const new_data = {
   user: '',
   db: '',
   update: {
     customData: {
       app: ''
     },
-    roles: [{role: '', db: ''}],
+    roles: [],
     pwd: ''
   }
 }
-// vi:et:nowrap:sw=2:ts=2
