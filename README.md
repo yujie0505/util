@@ -1,5 +1,3 @@
-# util
-
 ## mongo-root
 
 > scripts for managing mongoDB
@@ -45,4 +43,43 @@ $ vi new-data.js
 
 $ mongo admin update-user.js
 
+```
+
+## vue-express
+
+> start-up package for building Vue project on an Express server
+
+1. Install corresponding packages
+
+```bash
+$ npm i
+
+# or
+
+$ yarn
+```
+
+2. Create configuration file, **_option.json_** (not tracking this file on Git is recommended), and add fields like below:
+
+```json
+{
+  "paths": {
+    "dist": "dist",
+    "src": "app"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 3000
+  }
+}
+```
+
+3. Start server
+
+```bash
+$ npm run watch
+
+# or
+
+$ yarn run watch
 ```
