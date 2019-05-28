@@ -83,3 +83,43 @@ $ npm run watch
 
 $ yarn run watch
 ```
+
+## vue-electron
+
+> start-up package for building Electron application with Vue
+
+1. Install corresponding packages
+
+```bash
+$ npm i
+
+# or
+
+$ yarn
+```
+
+2. Execute scripts
+
+### Build executable applications, the corresponding [options](https://github.com/electron-userland/electron-packager/blob/master/usage.txt) could be added in `OPTS`
+
+```bash
+$ OPTS="[options]" npm run build:exe
+```
+
+### Build web application
+
+```bash
+$ npm run build:web
+```
+
+### Preview application in Electron
+
+```bash
+$ npm run preview
+```
+
+### Start web development server
+
+```bash
+$ npm start
+```
