@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron')
 const { join } = require('path')
 
 const options = {
-  entry_path: join(__dirname, './dist/index.html'),
+  entry_path: join(__dirname, 'development' === process.env.NODE_ENV ? './dist/index.html' : './index.html'),
   layout: {
     height: 550,
     width: 440

@@ -3,9 +3,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:exe": "./node_modules/.bin/electron-packager . MedX --out MedX --overwrite --platform=linux --arch=x64 --icon=favicon.ico --ignore=./node_modules/electron* --no-prune",
+    "build:exe": "npm run build:preprocess && ./node_modules/.bin/electron-packager .tmp run --out exe-dist --overwrite $OPTS && /bin/rm -rf .tmp",
+    "build:preprocess": "npm run build:web -- --output-path=.tmp && /bin/cp index.js package.json .tmp",
     "build:web": "./node_modules/.bin/webpack",
-    "preview": "./node_modules/.bin/webpack && ./node_modules/.bin/electron .",
+    "preview": "npm run build:web && NODE_ENV=development ./node_modules/.bin/electron .",
     "start": "./node_modules/.bin/webpack-dev-server"
   },
   "babel": {
