@@ -1,4 +1,5 @@
 <template lang="pug">
+h1 jijijiji
 </template>
 
 <script>

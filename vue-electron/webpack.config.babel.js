@@ -5,7 +5,7 @@ import webpack from 'webpack'
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 export default {
-  context: resolve('app'),
+  context: resolve('src'),
   devServer: {
     contentBase: resolve('dist'),
     inline: true,
@@ -62,7 +62,7 @@ export default {
           { loader: 'css-loader' },
           { loader: 'postcss-loader', options: { plugins: [autoprefixer] } },
           { loader: 'sass-loader', options: { indentedSyntax: true } },
-          { loader: 'sass-resources-loader', options: { resources: resolve('./app/util.sass') } }
+          { loader: 'sass-resources-loader', options: { resources: resolve('./src/util.sass') } }
         ]
       },
       { test: /\.vue$/, use: 'vue-loader' }
